@@ -22,12 +22,26 @@ test('check token is number', () => {
 });
 
 test('check token is operation', () => {
-	expect(interpreter.isNumber('0')).toBe(false);
-	expect(interpreter.isNumber('A')).toBe(false);
-	expect(interpreter.isNumber('(')).toBe(false);
-	expect(interpreter.isNumber(')')).toBe(false);
-	expect(interpreter.isNumber('+')).toBe(false);
-	expect(interpreter.isNumber('-')).toBe(false);
-	expect(interpreter.isNumber('/')).toBe(false);
-	expect(interpreter.isNumber('*')).toBe(false);
+	expect(interpreter.isOperation('0')).toBe(false);
+	expect(interpreter.isOperation('A')).toBe(false);
+	expect(interpreter.isOperation('(')).toBe(false);
+	expect(interpreter.isOperation(')')).toBe(false);
+	expect(interpreter.isOperation('+')).toBe(true);
+	expect(interpreter.isOperation('-')).toBe(true);
+	expect(interpreter.isOperation('/')).toBe(true);
+	expect(interpreter.isOperation('*')).toBe(true);
+});
+
+test('check token is new node beginning', () => {
+	expect(interpreter.isNewNodeBegin('(')).toBe(true);
+	expect(interpreter.isNewNodeBegin(')')).toBe(false);
+	expect(interpreter.isNewNodeBegin('0')).toBe(false);
+	expect(interpreter.isNewNodeBegin('A')).toBe(false);
+});
+
+test('check token is node ending', () => {
+	expect(interpreter.isNewNodeEnd('(')).toBe(false);
+	expect(interpreter.isNewNodeEnd(')')).toBe(true);
+	expect(interpreter.isNewNodeEnd('0')).toBe(false);
+	expect(interpreter.isNewNodeEnd('A')).toBe(false);
 });
