@@ -81,7 +81,7 @@ Interpreter.prototype.input = function(expr) {
 };
 
 Interpreter.prototype.isNumber = function(token)  {
-	return !isNaN(input)
+	return !isNaN(token)
 };
 
 Interpreter.prototype.isOperation = function(token) {
@@ -101,8 +101,5 @@ function calc(program) {
 	return interpreter.input(program);
 };
 
-function sum(a,b) {
-	return a+b;
-}
 
-module.exports = sum;
+module.exports = Interpreter;
