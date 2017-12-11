@@ -1,3 +1,5 @@
+task: http://www.codewars.com/kata/52a78825cdfc2cfc87000005
+
 Instructions
 
 Given a mathematical expression as a string you must return the result as a number.
