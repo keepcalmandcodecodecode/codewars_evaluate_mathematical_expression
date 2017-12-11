@@ -1,0 +1,22 @@
+{
+  "name": "codewars_evaluate_mathematical_expression",
+  "version": "1.0.0",
+  "description": "task: http://www.codewars.com/kata/52a78825cdfc2cfc87000005",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/keepcalmandcodecodecode/codewars_evaluate_mathematical_expression.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/keepcalmandcodecodecode/codewars_evaluate_mathematical_expression/issues"
+  },
+  "homepage": "https://github.com/keepcalmandcodecodecode/codewars_evaluate_mathematical_expression#readme",
+  "devDependencies": {
+    "jest": "^21.2.1"
+  }
+}
