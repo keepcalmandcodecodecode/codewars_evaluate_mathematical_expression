@@ -60,3 +60,7 @@ test('check negative numbers', () => {
 test('check positive numbers', () => {
 	expect(interpreter.input("1")).toBe(1);
 });
+
+test('test with nested operatoins', () => {
+	expect(interpreter.input("(1+1)*(4/2)")).toBe(4);
+});
