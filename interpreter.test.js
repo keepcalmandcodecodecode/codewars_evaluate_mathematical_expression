@@ -56,3 +56,7 @@ test('check simple programs with one operation and two operands', () => {
 test('check negative numbers', () => {
 	expect(interpreter.input("-1")).toBe(-1);
 });
+
+test('check positive numbers', () => {
+	expect(interpreter.input("1")).toBe(1);
+});

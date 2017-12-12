@@ -91,6 +91,8 @@ Interpreter.prototype.input = function(expr) {
     		}
     	}
     };
+    tree.push(currentNode);
+    currentNode = new SyntaxTreeNode()
     return  tree[0].calc();
 };
 
