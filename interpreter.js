@@ -78,7 +78,7 @@ Interpreter.prototype.input = function(expr) {
     for (var i = 0; i < tokens.length; i++) {
     	var token = tokens[i];
     	if(this.isNumber(token)){
-    		if (currentNode.leftNode == null) {
+    		if (currentNode.leftNode == null && currentNode.value == null) {
     			currentNode.leftNode = Number(token);
     		} else if (currentNode.value != null) {
     			currentNode.rightNode = Number(token);

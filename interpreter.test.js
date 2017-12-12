@@ -52,3 +52,7 @@ test('check simple programs with one operation and two operands', () => {
 	expect(interpreter.input("20/10")).toBe(2);
 	expect(interpreter.input("7*9")).toBe(63);
 });
+
+test('check negative numbers', () => {
+	expect(interpreter.input("-1")).toBe(-1);
+});
