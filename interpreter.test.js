@@ -45,3 +45,10 @@ test('check token is node ending', () => {
 	expect(interpreter.isNewNodeEnd('0')).toBe(false);
 	expect(interpreter.isNewNodeEnd('A')).toBe(false);
 });
+
+test('check simple programs with one operation and two operands', () => {
+	expect(interpreter.input("1+1")).toBe(2);
+	expect(interpreter.input("1-1")).toBe(0);
+	expect(interpreter.input("20/10")).toBe(2);
+	expect(interpreter.input("7*9")).toBe(63);
+});

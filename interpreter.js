@@ -75,9 +75,23 @@ Interpreter.prototype.input = function(expr) {
     var tree = [];
     var currentNode = new SyntaxTreeNode();
     var tokensLength = tokens.length
-    for (var i = tokens.length - 1; i >= 0; i--) {
-    	
+    for (var i = 0; i < tokens.length; i++) {
+    	var token = tokens[i];
+    	if(this.isNumber(token)){
+    		if (currentNode.leftNode == null) {
+    			currentNode.leftNode = Number(token);
+    		} else if (currentNode.value != null) {
+    			currentNode.rightNode = Number(token);
+    			tree.push(currentNode);
+    			currentNode = new SyntaxTreeNode()
+    		}
+    	} else if(this.isOperation(token)){
+    		if (currentNode.value == null) {
+    			currentNode.value = token;
+    		}
+    	}
     };
+    return  tree[0].calc();
 };
 
 Interpreter.prototype.isNumber = function(token)  {
